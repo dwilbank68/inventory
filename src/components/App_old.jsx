@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
-import ItemList from './components/ItemList.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ItemList from './ItemList.jsx';
+import ReactFire from 'reactfire';
+import firebase from 'firebase';
+const rootUrl = 'https://inventory-79bbc.firebaseio.com/';
 // import PropTypes from 'prop-types';
 
+const config = {
+    apiKey: "AIzaSyC59bH1G0BGMfaaExTO0Zbt-2v7DCDn_vs",
+    authDomain: "inventory-79bbc.firebaseapp.com",
+    databaseURL: "https://inventory-79bbc.firebaseio.com",
+    projectId: "inventory-79bbc",
+    storageBucket: "",
+    messagingSenderId: "448282183244",
+    appId: "1:448282183244:web:61abb1fe94abca673756e9"
+};
+
+firebase.initializeApp(config)
 // import App.js from './App.js.jsx';
 class App extends Component {
     
